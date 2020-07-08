@@ -34,7 +34,6 @@ function MainStackNavigator() {
       },
       headerTitleAlign: 'center',
       headerBackTitleStyle: {
-        color: '#00',
         fontWeight: 'bold'
       },
       headerTintColor: '#FFFFFF'

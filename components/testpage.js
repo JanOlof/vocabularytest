@@ -118,31 +118,9 @@ function TestPage({ navigation }) {
             {isLoading == true && <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                           <Text>Please wait while fetching the movie information...</Text>
                           <ActivityIndicator size="large" color="#aa0707" /></View>}
-              {/*loopar igenom json-datan och skriver ut de värdena som är angivna inom <Text/>
-                 knapparna går vidare till olika sidor via navigation */}
-{/*                  
-            {filmer.map((film, index) => (<View key={index}>
-                <Text>{film.Word1}</Text>
-                <Text>{film.Word2}</Text>
-                <Text> {filmer[currentId].Word1} - Test</Text>
-               
-              </View>
-            ))} */}
           </View>
         )
 }
 
 export default TestPage
 
-
-
-// export default function TestPage({route, navigation}) {
-//    // const { film } = route.params;
-
-//     return (
-     
-//           <View>
-//               <Text >Hej på sidan för prov</Text>
-//           </View>
-//          )
-// }

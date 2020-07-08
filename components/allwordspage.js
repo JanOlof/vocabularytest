@@ -1,20 +1,13 @@
 import 'react-native-gesture-handler';
 import React, {useState, useEffect} from 'react';
 import {Text, View, Button, TextInput, TouchableOpacity, ActivityIndicator, ImageBackground, ScrollView} from 'react-native';
-//import {FontAwesome, AntDesign } from '@expo/vector-icons';
 import { useFocusEffect } from '@react-navigation/native';
 import styles from '../styles';
-
-//import React from 'react';
-//import {Text, View, ImageBackground, ScrollView, TouchableOpacity} from 'react-native';
-//import {FontAwesome, AntDesign } from '@expo/vector-icons';
-//import styles from '../styles';
-//import Footer from './footer';
 
 
 function AllWordsPage({ navigation }) {
     const [isLoading, setLoading] = useState(true);
-    const [filmer, setFilmer] = useState([]);
+    const [wordPairs, setWordPairs] = useState([]);
     const [reLoading, setReLoading] = React.useState(null);
     //uppdaterar sidan varje gång man kommer till den
     useFocusEffect(
@@ -26,8 +19,7 @@ function AllWordsPage({ navigation }) {
         .then(data => {
             console.log(data)
             setLoading(false);
-            setFilmer(data); 
-            //setCurrentId(2); 
+            setWordPairs(data); 
         })
         .catch(error => {
           console.error(error);
@@ -44,9 +36,9 @@ function AllWordsPage({ navigation }) {
                           <ActivityIndicator size="large" color="#aa0707" /></View>}
               {/*loopar igenom json-datan och skriver ut de värdena som är angivna inom <Text/>
                  knapparna går vidare till olika sidor via navigation */}
-            {filmer.map((film, index) => (<View key={index} style = {styles.flexcontainer}>
-                <Text style = {styles.breadText}>{film.Word1}</Text>
-                <Text  style = {styles.breadText}>{film.Word2}</Text>
+            {wordPairs.map((wordPair, index) => (<View key={index} style = {styles.flexcontainer}>
+                <Text style = {styles.breadText}>{wordPair.Word1}</Text>
+                <Text  style = {styles.breadText}>{wordPair.Word2}</Text>
                         </View>
             ))} 
           </ScrollView>
