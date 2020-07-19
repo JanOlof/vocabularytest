@@ -9,8 +9,7 @@ export default function StartPage({route, navigation}) {
      
           <View  style = { styles.container }>
              <Button title ='Gör prov' onPress = {() =>  navigation.navigate('Test')} />   
-             <View style={{padding:5} }>
-            </View>
+             <View style={{padding:5} } />
              <Button title ='Visa alla ord' onPress = {() =>  navigation.navigate('AllWords')} />   
           </View>
          )

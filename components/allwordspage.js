@@ -14,7 +14,8 @@ function AllWordsPage({ navigation }) {
       React.useCallback(() => {
     // Om isLoading är sant hämtas data en gång från mitt API som körs lokalt.
     if (isLoading == true) {
-        fetch ('http://192.168.10.135:50000/api/wordtest?languageCode1=sv-se&languageCode2=fr-fr')
+        //fetch ('http://192.168.10.135:50000/api/wordtest?languageCode1=sv-se&languageCode2=fr-fr')
+        fetch ('http://localhost:53645/api/wordtest?languageCode1=sv-se&languageCode2=fr-fr')
         .then(response=> response.json())
         .then(data => {
             console.log(data)
@@ -37,8 +38,8 @@ function AllWordsPage({ navigation }) {
               {/*loopar igenom json-datan och skriver ut de värdena som är angivna inom <Text/>
                  knapparna går vidare till olika sidor via navigation */}
             {wordPairs.map((wordPair, index) => (<View key={index} style = {styles.flexcontainer}>
-                <Text style = {styles.breadText}>{wordPair.Word1}</Text>
-                <Text  style = {styles.breadText}>{wordPair.Word2}</Text>
+                <Text style = {styles.breadText}>{wordPair[0].Word1}</Text>
+                <Text  style = {styles.breadText}>{wordPair[0].Word2}</Text>
                         </View>
             ))} 
           </ScrollView>

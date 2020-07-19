@@ -142,14 +142,14 @@ const styles = StyleSheet.create({
         
     //   },
 
-    //   flexDetailContainer: {
-    //     width: '100%',
-    //     display: 'flex',
-    //     flex: 0,
-    //     flexDirection: 'row',
-    //     justifyContent: 'space-evenly',
-    //     padding: 10
-    //   }, 
+      flexDetailContainer: {
+        width: '100%',
+        display: 'flex',
+        flex: 0,
+        flexDirection: 'row',
+        //justifyContent: 'space-evenly',
+        //padding: 10
+      }, 
 
     // headText: {
     //     color: '#aa0707',
