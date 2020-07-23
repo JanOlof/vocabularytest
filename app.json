@@ -25,6 +25,7 @@
     "android": {
       "package": "se.jodata.vocabulary",
       "versionCode": 1
-    }
+    },
+    "description": ""
   }
 }
