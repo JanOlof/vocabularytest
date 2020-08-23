@@ -5,18 +5,16 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         flexGrow: 1,
-        marginTop: 24,
+        marginTop: 12,
         marginLeft: 24,
         paddingRight: 24,                
       },
-
-    // footerTextStyle: {
-    //     margin: 20,
-    //     fontSize: 12,
-    //     color: '#000',
-    //     textAlign: 'center'
-    //   },
-      
+      background: {
+        flex: 1,
+        flexDirection: 'column',
+        flexGrow: 1,    
+      },
+     
     flexcontainer: {
         marginTop: 12, 
         width: '100%',
@@ -26,121 +24,70 @@ const styles = StyleSheet.create({
         alignContent: 'flex-end'
       },
 
-    // headButtonContainer: {
-    //     backgroundColor: '#000',
-    //     borderRadius: 5,
-    //     padding: 10,
-    //     marginBottom: 20,
-    //     width: '100%'
-    //   },
+      listTextStyle: {
+        fontSize: 16,
+        marginBottom: 8,
+        fontWeight: 'bold',
+        //color: 'darkblue',
+        backgroundColor: '#54C3E5',
+        padding: 5, 
+    },
 
-    // headButtonText: {
-    //     fontSize: 20,
-    //     color: '#aa0707',
-    //     textAlign: 'center',
-    //     fontWeight: 'bold'
-    //   },
-
-    //   buttonContainer: {
-    //     backgroundColor: '#000',
-    //     borderBottomLeftRadius: 5,
-    //     borderTopLeftRadius: 5,
-    //     paddingLeft: 2,
-    //     paddingRight: 2,
-    //     paddingTop: 10,
-    //     width: '80%',
-    //     marginBottom: 10,
-    //     height: 47
-    //     },
-  
-    // buttonText: {
-    //     fontSize: 16,
-    //     color: '#aa0707',
-    //     textAlign: 'center',
-    //     fontWeight: 'bold'
-    //   },
-
-    // addButtonContainer: {
-    //     backgroundColor: '#000',
-    //     borderRadius: 5,
-    //     padding: 10,
-    //     marginTop: 16,
-    //     width: '100%'
-    //   },
-
-    // deleteButtonContainer: {
-    //     backgroundColor: '#000',
-    //     padding: 5,
-    //     paddingTop: 12,
-    //     height: 47, 
-    //     width: '10%',
-    //     marginBottom: 10,
-    //     borderLeftColor: '#aa0707',
-    //     borderLeftWidth: 1
-    //   },
-
-    // editButtonContainer: {
-    //     backgroundColor: '#000',
-    //     borderTopRightRadius: 5,
-    //     borderBottomRightRadius: 5,
-    //     padding: 5,
-    //     height: 47, 
-    //     width: '10%',
-    //     marginBottom: 10,
-    //     borderLeftColor: '#aa0707',
-    //     borderLeftWidth: 1,
-    //     paddingTop: 13
-    //   },
-
-    // footerContainer: {
-    //     backgroundColor: 'rgba(250, 250, 250, 0.3)',
-    //     marginTop: 10
-    //   },
-
-    // input: {
-    //     width: '100%',
-    //     margin: 'auto',
-    //     borderColor: '#aa0707',
-    //     borderWidth: 2,
-    //     borderRadius: 5,
-    //     marginBottom: 8,
-    //     padding: 4,
-    //     backgroundColor: '#fff',
-    //     fontWeight: 'bold'
-    //   },
-
+    buttonStyleTight: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      //color: 'darkblue',
+      backgroundColor: '#54C3E5',
+      paddingBottom: 2, 
+      paddingTop: 2, 
+      paddingStart: 10,
+      paddingEnd: 10, 
+      overflow:'hidden',
+      borderRadius:5,
+      borderWidth: 1.5,
+      textAlign: 'center',
+      borderColor:'gray',
+  },
+  buttonStyleNormal: {
+    marginBottom: 8,
+    fontSize: 16,
+    fontWeight: 'bold',
+    //color: 'darkblue',
+    backgroundColor: '#54C3E5',
+    paddingBottom: 2, 
+    paddingTop: 2, 
+    paddingStart: 10,
+    paddingEnd: 10, 
+    overflow:'hidden',
+    borderRadius:5,
+    borderWidth: 1.5,
+    textAlign: 'center',
+    borderColor:'gray',
+},
     topInput: {
         width: '100%',
         margin: 'auto',
        
-        borderWidth: 2,
+        borderWidth: 1.5,
         borderRadius: 5,
         marginBottom: 8,
-        padding: 4,
+        padding: 2,
         backgroundColor: '#fff',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: 16
       },
       topInputOk: {
         width: '100%',
         margin: 'auto',
         
-        borderWidth: 2,
+        borderWidth: 1.5,
         borderRadius: 5,
         marginBottom: 8,
-        padding: 4,
+        padding: 2,
         backgroundColor: '#87E881',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: 16
       },
-
-    // detailView: {
-    //     width: '100%',
-    //     borderColor: '#aa0707',
-    //     borderWidth: 2,
-    //     borderRadius: 5,
-    //     backgroundColor: '#fff',
-    //     padding: 4,
-        
-    //   },
 
       flexDetailContainer: {
         width: '100%',
@@ -150,14 +97,6 @@ const styles = StyleSheet.create({
         //justifyContent: 'space-evenly',
         //padding: 10
       }, 
-
-    // headText: {
-    //     color: '#aa0707',
-    //     fontWeight: 'bold',
-    //     fontSize: 24,
-    //     textAlign: "center"
-    //   },
-
     breadText: {
         fontWeight: 'bold',
         fontSize: 16,
@@ -167,12 +106,12 @@ const styles = StyleSheet.create({
       },
   
       textStyleHeader: {
-         marginBottom: 12,
+         marginBottom: 4,
         // marginLeft: 24,
         // marginRight: 24,
         fontSize: 24,
         fontWeight: 'bold',
-        color: 'darkblue'
+        color: '#0027FF'
       },
       textGeneral: {
         marginBottom: 12,
