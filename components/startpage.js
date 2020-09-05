@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useFocusEffect } from '@react-navigation/native';
-import {Text, View, SafeAreaView, Button, ActivityIndicator, TouchableOpacity, FlatList} from 'react-native';
+import {Text, View, SafeAreaView, Image, Button, ActivityIndicator, TouchableOpacity, FlatList} from 'react-native';
 import styles from '../styles';
 
 export default function StartPage({route, navigation}) {
@@ -11,7 +11,7 @@ export default function StartPage({route, navigation}) {
        React.useCallback(() => {
      // Om isLoading är sant hämtas data en gång från mitt API som körs lokalt.
      if (isLoading == true) {
-         fetch('https://193.10.202.70/WordLearn/api/wordgroups')
+         fetch('http://193.10.202.70/WordLearn/api/wordgroups')
          //fetch('http://192.168.10.134:50000/api/wordgroups')
          .then(response=> response.json())
          .then(data => {
@@ -28,8 +28,10 @@ export default function StartPage({route, navigation}) {
    )
    
    return (
-   <View style={styles.background}>     
+   <View style={styles.background}>
+     
      <View style={styles.container}>
+     <Text style={styles.textGeneral}>Övningar</Text>
        <SafeAreaView style={styles.container}>
         {isLoading == true && <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
            <Text>Vänta medan data laddas ...</Text>
@@ -41,12 +43,16 @@ export default function StartPage({route, navigation}) {
            renderItem={({item}) => 
            /* Skapar ett nytt objekt med property Id i stället för att skicka hela item -  förstår inte varför det krävs :( */
            <TouchableOpacity onPress={() => navigation.navigate('Test', {Id: item.Id})}> 
-             <Text style = {styles.listTextStyle}>{item.Description}</Text>
+             <Text style = {[styles.buttonBase, styles.buttonStyleNormal]}>{item.Description}</Text>
            </TouchableOpacity>          
          }
            keyExtractor={item => item.Id.toString()}
          />
        </SafeAreaView>
+       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                            <Image source={require('../assets/books.png')}  />
+                          </View>
+       <Text>Version 0.9.1</Text>     
      </View>
    </View>
    );

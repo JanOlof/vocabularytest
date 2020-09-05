@@ -6,13 +6,15 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         flexGrow: 1,
         marginTop: 12,
+        marginBottom: 12,
         marginLeft: 24,
-        paddingRight: 24,                
+        paddingRight: 24,        
       },
       background: {
         flex: 1,
         flexDirection: 'column',
-        flexGrow: 1,    
+        flexGrow: 1, 
+        backgroundColor: '#EDEEED',                
       },
      
     flexcontainer: {
@@ -21,48 +23,36 @@ const styles = StyleSheet.create({
         display: 'flex',
         flex: 0,
         flexDirection: 'row',
-        alignContent: 'flex-end'
+        alignContent: 'flex-end',
       },
 
       listTextStyle: {
         fontSize: 16,
         marginBottom: 8,
-        fontWeight: 'bold',
-        //color: 'darkblue',
-        backgroundColor: '#54C3E5',
+        //fontWeight: 'bold',
+        color: '#EDEEED',
+        //backgroundColor: '#F0AD4B',
+        backgroundColor: '#2A2946',
         padding: 5, 
     },
-
-    buttonStyleTight: {
-      fontSize: 16,
-      fontWeight: 'bold',
-      //color: 'darkblue',
-      backgroundColor: '#54C3E5',
-      paddingBottom: 2, 
-      paddingTop: 2, 
-      paddingStart: 10,
-      paddingEnd: 10, 
-      overflow:'hidden',
-      borderRadius:5,
-      borderWidth: 1.5,
-      textAlign: 'center',
-      borderColor:'gray',
-  },
-  buttonStyleNormal: {
-    marginBottom: 8,
-    fontSize: 16,
-    fontWeight: 'bold',
-    //color: 'darkblue',
-    backgroundColor: '#54C3E5',
-    paddingBottom: 2, 
-    paddingTop: 2, 
-    paddingStart: 10,
-    paddingEnd: 10, 
+buttonBase: {
+  backgroundColor: '#F0AD4B',
+    paddingBottom: 4, 
+    paddingTop: 4, 
+    paddingStart: 15,
+    paddingEnd: 15, 
     overflow:'hidden',
-    borderRadius:5,
-    borderWidth: 1.5,
+    borderRadius:15,
     textAlign: 'center',
     borderColor:'gray',
+},
+    buttonStyleTight: {
+      fontSize: 12,
+  },
+  buttonStyleNormal: {    
+     fontSize: 15,
+     marginTop: 8,
+     marginBottom: 0,
 },
     topInput: {
         width: '100%',
@@ -70,7 +60,7 @@ const styles = StyleSheet.create({
        
         borderWidth: 1.5,
         borderRadius: 5,
-        marginBottom: 8,
+        //marginBottom: 4,
         padding: 2,
         backgroundColor: '#fff',
         fontWeight: 'bold',
@@ -82,7 +72,7 @@ const styles = StyleSheet.create({
         
         borderWidth: 1.5,
         borderRadius: 5,
-        marginBottom: 8,
+        //marginBottom: 4,
         padding: 2,
         backgroundColor: '#87E881',
         fontWeight: 'bold',
@@ -94,9 +84,14 @@ const styles = StyleSheet.create({
         display: 'flex',
         flex: 0,
         flexDirection: 'row',
-        //justifyContent: 'space-evenly',
+        //justifyContent: 'center',
+        justifyContent: 'space-evenly',
         //padding: 10
       }, 
+buttonContainer: {
+  flex: 1,
+},
+
     breadText: {
         fontWeight: 'bold',
         fontSize: 16,
@@ -105,16 +100,16 @@ const styles = StyleSheet.create({
         textAlign: "center"
       },
   
-      textStyleHeader: {
+      textStyleTestWord: {
+        textAlign: "center",
          marginBottom: 4,
-        // marginLeft: 24,
-        // marginRight: 24,
         fontSize: 24,
         fontWeight: 'bold',
-        color: '#0027FF'
+        color: '#2A2946'
       },
       textGeneral: {
         marginBottom: 12,
+        color: '#2A2946',
        // marginLeft: 24,
        // marginRight: 24,
        fontSize: 16,
