@@ -38,21 +38,21 @@ export default function StartPage({route, navigation}) {
            <ActivityIndicator size="large" color="#aa0707" />
             </View>}
  
-         <FlatList
+        <FlatList
            data={wordgroups}
+           keyExtractor={item => item.Id.toString()}
            renderItem={({item}) => 
            /* Skapar ett nytt objekt med property Id i stället för att skicka hela item -  förstår inte varför det krävs :( */
-           <TouchableOpacity onPress={() => navigation.navigate('Test', {Id: item.Id})}> 
-             <Text style = {[styles.buttonBase, styles.buttonStyleNormal]}>{item.Description}</Text>
-           </TouchableOpacity>          
-         }
-           keyExtractor={item => item.Id.toString()}
-         />
-       </SafeAreaView>
-       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                            <Image source={require('../assets/books.png')}  />
-                          </View>
-       <Text>Version 0.9.1</Text>     
+            <TouchableOpacity onPress={() => navigation.navigate('Test', {Id: item.Id})}> 
+                <Text style = {[styles.buttonBase, styles.buttonStyleNormal]}>{item.Description}</Text>
+            </TouchableOpacity>          
+            }
+        />
+        </SafeAreaView>
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+          <Image source={require('../assets/books.png')} style={{width: 150, height: 150}} />
+        </View>
+        <Text>Version 1.0.0</Text>     
      </View>
    </View>
    );

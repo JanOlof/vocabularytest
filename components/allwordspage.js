@@ -37,9 +37,9 @@ function AllWordsPage({ navigation }) {
                           <ActivityIndicator size="large" color="#aa0707" /></View>}
               {/*loopar igenom json-datan och skriver ut de värdena som är angivna inom <Text/>
                  knapparna går vidare till olika sidor via navigation */}
-            {wordPairs.map((wordPair, index) => (<View key={index} style = {styles.flexcontainer}>
-                <Text style = {styles.breadText}>{wordPair[0].Word1}</Text>
-                <Text  style = {styles.breadText}>{wordPair[0].Word2}</Text>
+            {wordPairs.map((wordPair, index) => (<View key={index} style = {styles.rowContainer}>
+                <Text style = {styles.textGeneral}>{wordPair[0].Word1}</Text>
+                <Text  style = {styles.textGeneral}>{wordPair[0].Word2}</Text>
                         </View>
             ))} 
           </ScrollView>
