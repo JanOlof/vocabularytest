@@ -189,12 +189,16 @@ function TestPage({ route }) {
             <View style={styles.container} >
                 {wordPairs.length > 0 ? (
                     <View>
-                        <View style={styles.rowContainer} >
+                       <View style={styles.rowContainer} >
+                            <View style={styles.buttonContainer} >
                             <Text style={styles.textGeneral}> {currentIndex + 1}/{wordPairs.length}</Text>
+                            </View>
                             <View style={{ padding: 15 }} />
+                            <View style={styles.buttonContainer} >
                             <TouchableOpacity onPress={() => changeLanguage()}>
                                 <Text style={[styles.buttonBase, styles.buttonStyleTight]}>{getLanguageInfo(0)} <AntDesign name="swap" size={16} color="black" /> {getLanguageInfo(1)}</Text>
                             </TouchableOpacity>
+                            </View>
                         </View>
                         <View>
                             <Text style={styles.textStyleTestWord}> {getWordSummary()}</Text>
@@ -226,13 +230,17 @@ function TestPage({ route }) {
                             </View>
                         </View>
                         <View style={styles.rowContainer} >
-                            <TouchableOpacity onPress={() => nextLetter()}>
-                                <Text style={[styles.buttonBase, styles.buttonStyleNormal]}>Nästa bokstav <AntDesign name="caretright" size={12} color="black" /></Text>
-                            </TouchableOpacity>
+                            <View style={styles.buttonContainer} >
+                                <TouchableOpacity onPress={() => nextLetter()}>
+                                    <Text style={[styles.buttonBase, styles.buttonStyleNormal]}>Nästa bokstav <AntDesign name="caretright" size={14} color="black" /></Text>
+                                </TouchableOpacity>
+                            </View>
                             <View style={{ padding: 5 }} />
-                            <TouchableOpacity onPress={() => nextWord()}>
-                                <Text style={[styles.buttonBase, styles.buttonStyleNormal]}>Nästa ord <AntDesign name="forward" size={12} color="black" /> </Text>
-                            </TouchableOpacity>
+                            <View style={styles.buttonContainer} >
+                                <TouchableOpacity onPress={() => nextWord()}>
+                                    <Text style={[styles.buttonBase, styles.buttonStyleNormal]}>Nästa ord <AntDesign name="stepforward" size={14} color="black" /> </Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
                     </View>
                 ) : <Text> {/*Visas när  wordPairs.length = 0. Men är tom och hanteras nedan i isLoading istället*/}</Text>
@@ -241,9 +249,9 @@ function TestPage({ route }) {
 
                 {/*Laddar tills innehållet kommer fram*/}
                 {isLoading == true && <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <Text>Vänta medan dina glosor laddas...</Text>
-                        <ActivityIndicator size="large" color="#aa0707" />
-                    </View>}
+                    <Text>Vänta medan dina glosor laddas...</Text>
+                    <ActivityIndicator size="large" color="#aa0707" />
+                </View>}
                 <ScrollView style={styles.imageContainer}>
                     <View style={styles.rowContainer}>
                         <Image source={require('../assets/pencil.png')} />

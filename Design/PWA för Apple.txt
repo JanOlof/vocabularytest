@@ -1,0 +1,3 @@
+Ändra i manifest.json och lägg till en . före /
+
+  "start_url": "./?utm_source=web_app_manifest",

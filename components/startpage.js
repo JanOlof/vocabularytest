@@ -44,15 +44,15 @@ export default function StartPage({route, navigation}) {
            renderItem={({item}) => 
            /* Skapar ett nytt objekt med property Id i stället för att skicka hela item -  förstår inte varför det krävs :( */
             <TouchableOpacity onPress={() => navigation.navigate('Test', {Id: item.Id})}> 
-                <Text style = {[styles.buttonBase, styles.buttonStyleNormal]}>{item.Description}</Text>
+                <Text style = {[styles.buttonBase, styles.buttonStyleNormal, styles.buttonStyleList]}>{item.Description}</Text>
             </TouchableOpacity>          
             }
         />
         </SafeAreaView>
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Image source={require('../assets/books.png')} style={{width: 150, height: 150}} />
+        <View style={{flex: 0, justifyContent: 'center', alignItems: 'flex-end'}}>
+          <Image source={require('../assets/books.png')} style={{width: 100, height: 100}} />
         </View>
-        <Text>Version 1.0.0</Text>     
+        <Text>Version 1.0.1</Text>     
      </View>
    </View>
    );

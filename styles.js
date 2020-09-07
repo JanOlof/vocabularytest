@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     marginTop: 12,
     marginBottom: 12,
-    marginLeft: 24,
-    paddingRight: 24,
+    marginLeft: 12,
+    paddingRight: 12,
   },
   background: {
     flex: 1,
@@ -26,22 +26,27 @@ const styles = StyleSheet.create({
 
   buttonBase: {
     backgroundColor: '#F0AD4B',
-    paddingBottom: 4,
-    paddingTop: 4,
-    paddingStart: 15,
-    paddingEnd: 15,
+    paddingBottom: 6,
+    paddingTop: 6,
+    paddingStart: 10,
+    paddingEnd: 10,
     overflow: 'hidden',
-    borderRadius: 15,
+    borderRadius: 10,
     textAlign: 'center',
     borderColor: 'gray',
   },
   buttonStyleTight: {
-    fontSize: 12,
+    fontSize: 11,
+    paddingBottom: 3,
+    paddingTop: 3,
   },
   buttonStyleNormal: {
-    fontSize: 15,
-    marginTop: 8,
+    fontSize: 16,
+    marginTop: 10,
     marginBottom: 0,
+  },
+  buttonStyleList: {
+    width: '75%',
   },
   topInput: {
     width: '100%',
@@ -51,7 +56,7 @@ const styles = StyleSheet.create({
     padding: 2,
     backgroundColor: '#fff',
     fontWeight: 'bold',
-    fontSize: 16
+    fontSize: 20
   },
   topInputOk: {
     width: '100%',
@@ -61,7 +66,7 @@ const styles = StyleSheet.create({
     padding: 2,
     backgroundColor: '#87E881',
     fontWeight: 'bold',
-    fontSize: 16
+    fontSize: 20
   },
 
   rowContainer: {
@@ -85,7 +90,7 @@ const styles = StyleSheet.create({
   textGeneral: {
     marginBottom: 12,
     color: '#2A2946',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold'
   },
 });
