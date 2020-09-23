@@ -76,7 +76,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
   },
-
+  rowContainer2: {
+    width: '100%',
+    display: 'flex',
+    flex: 0,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  },
   buttonContainer: {
     flex: 1,
   },
