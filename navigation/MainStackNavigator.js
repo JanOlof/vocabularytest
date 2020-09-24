@@ -23,7 +23,7 @@ function MainStackNavigator() {
       headerTintColor: '#EDEEED', 
       headerTruncatedBackTitle: 'Start',
       }}>
-        <Stack.Screen name='Start' component={StartPage}  options={{ title: 'Träna glosor' }}/>
+        <Stack.Screen name='Start' component={StartPage}  options={{ title: 'Öva ord' }}/>
         <Stack.Screen name='Test' component={TestPage}  options={{ title: 'Ordprov' }}/>
         <Stack.Screen name='AllWords' component={AllWordsPage} options={{ title: 'Ordlista' }}/>
       </Stack.Navigator>

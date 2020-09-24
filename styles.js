@@ -81,7 +81,10 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 0,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    marginBottom: 3,
+    backgroundColor: '#EDEEED',
   },
   buttonContainer: {
     flex: 1,
@@ -97,8 +100,24 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     color: '#2A2946',
     fontSize: 18,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    flexWrap: 'wrap'
   },
+  textMedium: {
+    marginBottom: 12,
+    color: '#2A2946',
+    fontSize: 14,
+    fontWeight: 'bold',
+    flexWrap: 'wrap'
+  },
+  button10: {
+    alignItems:"center",
+    width: '20%',
+  },
+  button80: {
+    width: '75%',
+  },
+
 });
 
 export default styles;
