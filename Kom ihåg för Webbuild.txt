@@ -1,0 +1,10 @@
+package.json - ändra
+"homepage": "/WordLearnApp",
+sökväg till appen på webbservern
+
+manifest.json - ändra  
+"start_url": "/?utm_source=web_app_manifest", 
+till 
+ "start_url": "./?utm_source=web_app_manifest",
+
+för relativt path till webbsidorna

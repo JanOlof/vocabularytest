@@ -1,0 +1,3 @@
+GET http://193.10.202.70/WordLearn/api/wordgroups
+Content-Type: application/json
+###
